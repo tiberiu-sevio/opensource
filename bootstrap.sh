@@ -15,7 +15,7 @@ if [ "$SELINUXSTATUS" == "Permissive" ]; then
 fi;
 
 sudo -S <<< "app" apt-get -y install php >> /var/log/system-bootstrap.log
-
-sudo -S <<< (umask 077 && test -d ~/.ssh || mkdir  ~/.ssh) >> /var/log/system-bootstrap.log
-sudo -S <<< (umask 077 && touch ~/.ssh/authorized_keys) >> /var/log/system-bootstrap.log
-echo "O_CHEIE_PUBLICA" > ~/.ssh/authorized_keys
+sudo -S <<< "app" mkdir ~/.ssh
+sudo -S <<< "app" touch ~/.ssh/authorized_keys
+sudo -S <<< "app" chmod 777 ~/.ssh/authorized_keys
+sudo -S <<< "app" echo "O_CHEIE_PUBLICA" > ~/.ssh/authorized_keys
