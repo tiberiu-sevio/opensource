@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "UUIIIIIIIIII2"
+echo "UUIIIIIIIIII3"
 sudo -S <<< "app" touch /var/log/system-bootstrap.log
 sudo -S <<< "app" chmod 777 /var/log/system-bootstrap.log
 
