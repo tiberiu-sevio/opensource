@@ -2,6 +2,8 @@
 
 echo "UUIIIIIIIIII"
 sudo -S <<< "app" touch /var/log/system-bootstrap.log
+sudo -S <<< "app" chmod 777 /var/log/system-bootstrap.log
+
 
 sudo -S <<< "app" apt-get update >> /var/log/system-bootstrap.log
 
